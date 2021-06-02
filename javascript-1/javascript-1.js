@@ -9,7 +9,7 @@
 */
 
 //CODE HERE
-
+let myArr = [4, 'abc',['cat', 'dog', 'bird'], 77];
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -21,6 +21,9 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
+
+let foundZ = nestedLetters[5][2][1];
+
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -39,12 +42,17 @@ const desert = ['rattlesnake', 'coyote']
 //CODE HERE
 
 
+const animals = [...forest, ...ocean, ...savannah, ...desert];
+
+
 /*
     Now use the spread operator to make a copy of your animals array.
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
 */
 
 //CODE HERE
+
+const animalsCopy = [...animals, 'elephant'];
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -57,6 +65,18 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
 
+const compareNums = (num1, num2) => {
+    if( num1 > num2){
+        return num1
+    }
+    else if(num2 > num1){
+        return num2
+    }
+    else{
+        return num1
+    }
+}
+
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,6 +88,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
+const bestMovie = (movie) => `${movie} is the best movie ever!`;
   
   
 ////////////////////PROBLEM 6////////////////////
@@ -76,6 +98,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
+const jsNinja = () => 'I am a JavaScript ninja!';
   
 
 ////////////////////PROBLEM 7////////////////////
@@ -97,6 +121,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+
+delete gameInfo.rating
   
 
 ////////////////////PROBLEM 8////////////////////
@@ -119,7 +145,13 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+
+for (let key in shapes) {
+    if(shapes[key] % 2 !== 0) {
+        delete shapes[`${key}`]
+    }
+}
+
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -161,7 +193,19 @@ const classes = [
 */
 
 //CODE HERE
+  for(let i = 0; i < classes.length; i++){
+     for(let key in classes[i]){
+         if(classes[i][key] == true){
+            classes[i][key] = false;
+         }
+     }
+  }
 
+  // for loops for arrays
+  // for in for objects.
+
+
+console.log(classes);
   
 ////////////////////PROBLEM 10////////////////////
 /*
