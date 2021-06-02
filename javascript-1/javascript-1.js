@@ -273,6 +273,9 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 
 //CODE HERE
 
+const bark = () => `${this.name} says bark!`;
+
+
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -280,6 +283,12 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
+
+let fidoSpeak = bark.call(fido);
+
+console.log(fidoSpeak)
+
+
   
   
 ////////////////////PROBLEM 13////////////////////
@@ -330,6 +339,14 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 
 //CODE HERE
 
+function Phone(brand, model, storage, color, sold){
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.sold = sold;
+}
+
   
 /*
     Next make three new phones using your constructor function.
@@ -343,11 +360,11 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 */
 
 //CODE HERE
-  // let phone1 = 
+   let phone1 = new Phone('iPhone', 'ten', 1, 'red', true)
   
-  // let phone2 = 
+   let phone2 = new Phone('HC', 'nine', 2, 'orange', false)
   
-  // let phone3 = 
+   let phone3 = new Phone('galaxy', 'eight', 3, 'yellow', true)
   
 /*
     Last, add a prototype method to Phone.
@@ -359,4 +376,8 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 
 //CODE HERE
 
+Phone.prototype.sell = function(){
+    this.sold = true
+    return `${this.brand} ${this.model} has been sold`;
+}
   
