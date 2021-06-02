@@ -205,7 +205,6 @@ const classes = [
   // for in for objects.
 
 
-console.log(classes);
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -221,6 +220,14 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
+
+for (let i = 0; i < lettersToPair.length; i++){
+    for(let j = i + 1; j < lettersToPair.length; j++){
+        if(lettersToPair[i] === lettersToPair[j]){
+             pairsArray.push([i, j]);
+        }
+    }
+}
 
     
 
@@ -239,6 +246,13 @@ let pairsArray = []
 
 //CODE HERE
 
+function Dog(name, age, breed, tricks){
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
+}
+
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -247,6 +261,7 @@ let pairsArray = []
 */
 
 //CODE HERE
+let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
   
 
 ////////////////////PROBLEM 12////////////////////
