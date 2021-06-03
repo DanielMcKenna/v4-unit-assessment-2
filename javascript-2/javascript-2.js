@@ -279,7 +279,7 @@ let topic = userInfo.topics[3];
 
 //CODE HERE
 
-let commenterId = userInfo.comments[1];
+let commenterId = userInfo.comments[1].responses[0].userId;
 
 console.log(commenterId);
 
