@@ -339,7 +339,7 @@ const teachTrick = function(trick){
 //CODE HERE
 
 function dogIntro(treat, toy){
-    `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`;
+    return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`;
 }
 
 // const dogIntro = (treat, toy) => `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`;
@@ -354,6 +354,10 @@ function dogIntro(treat, toy){
 //CODE HERE
 
 // let fidoIntro = dog.dogIntro.apply(fido, ['chicken', 'tennis ball']);
+
+let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
+
+console.log(fidoIntro);
 
 ////////////////////PROBLEM 15////////////////////
 /*
