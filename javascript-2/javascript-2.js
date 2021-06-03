@@ -267,6 +267,10 @@ let shouldAlert = userInfo.settings.alerts;
 
 //CODE HERE
 
+let topic = userInfo.topics[3];
+
+
+
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -274,6 +278,10 @@ let shouldAlert = userInfo.settings.alerts;
 */
 
 //CODE HERE
+
+let commenterId = userInfo.comments[1];
+
+console.log(commenterId);
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -293,6 +301,30 @@ let shouldAlert = userInfo.settings.alerts;
 */
 
 //CODE HERE
+
+let person = {
+  name: "Dan",
+  age: 28,
+  jobs: ['Global Payments', 'Weave', 'CustomerSuccess'],
+  birthday: function(){
+    return this.age += 1;
+  },
+  favorites: {
+    color: "blue",
+    number: 15,
+    book: "Mist Borne",
+  },
+  kids: [
+      {
+        name: "wahibo",
+        age: 1
+      },
+      {
+        name: "Kottlewalkels",
+        age: 200
+      }
+    ]
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -318,7 +350,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+ let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -331,6 +363,7 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+let context2 = window
 //let context2 = global
 //let context2 = workout
+
