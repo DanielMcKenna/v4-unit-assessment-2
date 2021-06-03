@@ -36,6 +36,9 @@ let foods = [
 */
 
 //CODE HERE
+foods.forEach(function(element){
+  element.calories = (element.carbs * 4) + (element.protein * 4) + (element.fat * 9);
+})
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -82,6 +85,16 @@ const products = [
 
 //CODE HERE
 
+let saleProducts = products.map(function(element){
+  console.log(element);
+  element.price = element.price - (element.price * .25);
+  return element;
+
+})
+
+console.log(saleProducts)
+
+
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -92,6 +105,14 @@ const products = [
 
 //CODE HERE
 
+let blueProducts = saleProducts.filter(function(element){
+  if(element.color.includes('blue')){
+    return element;
+}
+})
+
+
+
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
@@ -100,6 +121,11 @@ const products = [
 */
 
 //CODE HERE
+
+let orderTotal = blueProducts.reduce(function(acc, element){
+  acc += element.price;
+  return acc
+}, 0);
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -130,6 +156,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+const helensInfo = Object.assign(contactInfo, shippingInfo);
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -140,12 +167,21 @@ const shippingInfo = {
 
 //CODE HERE
 
+let ellensInfo = {...helensInfo};
+
+ellensInfo.name = "Ellen";
+ellensInfo.name = "Ellen";
+ellensInfo.email = "ellen@email.com";
+
+
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
+
+const  { email } = ellensInfo;
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -154,6 +190,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
+
+const { zipCode, state } = shippingInfo;
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
@@ -216,6 +254,10 @@ const userInfo = {
 */
 
 //CODE HERE
+
+let shouldAlert = userInfo.settings.alerts;
+
+
 
 ////////////////////PROBLEM 10////////////////////
 /*

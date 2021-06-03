@@ -261,8 +261,8 @@ function Dog(name, age, breed, tricks){
 */
 
 //CODE HERE
-let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
-  
+ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
+
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -273,9 +273,20 @@ let fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 
 //CODE HERE
 
-const bark = () => `${this.name} says bark!`;
+// const bark = () => `${this.name} says bark!`;
+
+function bark() {
+    return `${this.name} says bark!`;
+}
+
+// const dog = {
+//     bark: function(){
+//         return `${this.name} says bark!`;
+//     }
+// }
 
 
+// **** I am so confused I can get the value I need using the un commented function but I cannot get the value using the commented out arrow function ****
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -286,8 +297,8 @@ const bark = () => `${this.name} says bark!`;
 
 let fidoSpeak = bark.call(fido);
 
-console.log(fidoSpeak)
 
+console.log(fidoSpeak);
 
   
   
@@ -301,6 +312,11 @@ console.log(fidoSpeak)
 
 //CODE HERE
 
+const teachTrick = function(trick){
+    this.tricks.push(trick);
+    return this.tricks;
+}
+
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -308,7 +324,9 @@ console.log(fidoSpeak)
 */
 
 //CODE HERE
-  
+  let teachStay = teachTrick.bind(fido, "stay");
+
+  console.log(fido);
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -320,6 +338,12 @@ console.log(fidoSpeak)
 
 //CODE HERE
 
+function dogIntro(treat, toy){
+    `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`;
+}
+
+// const dogIntro = (treat, toy) => `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`;
+
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -328,7 +352,8 @@ console.log(fidoSpeak)
 */
 
 //CODE HERE
-  
+
+// let fidoIntro = dog.dogIntro.apply(fido, ['chicken', 'tennis ball']);
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -377,7 +402,7 @@ function Phone(brand, model, storage, color, sold){
 //CODE HERE
 
 Phone.prototype.sell = function(){
-    this.sold = true
-    return `${this.brand} ${this.model} has been sold`;
+    this.sold = true;
+    return `${this.brand} ${this.model} has been sold.`;
 }
   
